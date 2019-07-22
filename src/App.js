@@ -3,9 +3,11 @@ import './App.css';
 import logo from './logo.svg';
 import Cat from './modules/cat';
 import logger from './modules/core/logger';
+import Dog from './modules/dog';
 
 function App() {
   const [withCat, toggleCat] = React.useState(true);
+  const [withDog, toggleDog] = React.useState(true);
   const [isLoggerEnabled, updateLogger] = React.useState(logger.isEnabled);
 
   React.useEffect(() => {
@@ -42,6 +44,13 @@ function App() {
         </button>
       </div>
       {withCat && <Cat />}
+      <hr />
+      <div>
+        <button onClick={() => toggleDog(!withCat)}>
+          {withCat ? 'Hide Dog' : 'Show Dog'}
+        </button>
+      </div>
+      {withDog && <Dog />}
     </div>
   );
 }

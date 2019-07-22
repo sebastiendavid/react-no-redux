@@ -6,8 +6,8 @@ export default connect(
   {
     count: state => state.count,
   },
-  function CatTitle({ count }) {
-    logger.info('render CatTitle');
-    return <h1>Cat {count}</h1>;
+  function DogTitle({ count }) {
+    logger.info('render DogTitle');
+    return <h1>Dog {count}</h1>;
   }
 );

@@ -13,8 +13,8 @@ export default connect(
       noop: makeAction('noop'),
     },
   },
-  function CatActions({ actions }) {
-    logger.info('render CatActions');
+  function DogActions({ actions }) {
+    logger.info('render DogActions');
     return (
       <>
         <button onClick={() => actions.decrement()}>Decrement</button>

@@ -1,3 +1,3 @@
-export function action(type) {
+export default function makeAction(type) {
   return payload => ({ type, payload });
 }
